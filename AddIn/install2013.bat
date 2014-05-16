@@ -1,5 +1,7 @@
 rem Unsupported installation script for the Enova Class Wizard, VS2013.
 
+cd/d %0\..
+
 call "%ProgramFiles(x86)%\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" x86
 gacutil /i Wipcore.eNova.VisualStudio.WizardLib.dll
 gacutil /i Divelements.WizardFramework.dll
