@@ -66,11 +66,10 @@ function Main()
         $tryconnectports |
             Where-Object { [Net.Dns]::GetHostName() -eq $_.source.Split(".")[0] } |
             ForEach-Object {
+
             [string] $source = $_.source
             [string] $target = $_.target
             [int] $port = $_.port
-
-            [string] $thishost = [Net.Dns]::GetHostName()
 
             Write-Host ($source + " -> " + $target + ":" + $port + ": Trying to connect...")
             $socket = New-Object Net.Sockets.TcpClient
