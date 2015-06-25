@@ -7,7 +7,7 @@
 1. That your computer where you start this script is joined to the same AD
    domain as the computers to where Powershell remoting logins (source below).
 2. That you are using https, with certs and stuff. This is the approach Azure
-   uses, but requires generating certs on all servres and to open another
+   uses, but requires generating certs on all servers and to open another
    port. On the client it's however possible to ignore invalid ssl certs,
    although less safe. (google how).
 3. That you make changes to the global powershell client settings on your
